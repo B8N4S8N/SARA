@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import buildspaceLogo from '../assets/Frame 29.png';
 import { useState } from 'react';
+import logo from '/assets/output2.png';
 
 const Home = () => {
   const [userInput, setUserInput] = useState('');
@@ -41,7 +42,14 @@ const Home = () => {
       <div className="container">
         <div className="header">
           <div className="header-title">
-            <h1>Serenium's AI Recovery Assistant</h1>
+          <Image
+      
+      src={logo}
+      alt="Picture of the author"
+      width={666}
+      height={250}
+    />
+        
             
           </div>
           <div className="header-subtitle">
@@ -51,7 +59,7 @@ const Home = () => {
         <div className="prompt-container">
         <textarea
   className="prompt-box"
-  placeholder="start owning your path"
+  placeholder="...start owning your path"
   value={userInput}
   onChange={onUserChangedText}
 />;
