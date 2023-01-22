@@ -41,7 +41,7 @@ const Home = () => {
       <div className="container">
         <div className="header">
           <div className="header-title">
-            <h1>Open Source Recovery</h1>
+            <h1>Serenium's AI Recovery Assistant</h1>
             
           </div>
           <div className="header-subtitle">
