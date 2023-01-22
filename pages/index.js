@@ -46,8 +46,8 @@ const Home = () => {
       
       src={logo}
       alt="Picture of the author"
-      width={666}
-      height={250}
+      width={300}
+      height={100}
     />
         
             
