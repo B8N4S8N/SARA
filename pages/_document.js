@@ -8,7 +8,7 @@ export default function Document() {
         <meta property="og:description" content="Chat with SARA from O.S.R." key="description"/>
         <meta
           property="og:image"
-          content="https://res.cloudinary.com/guttermade-llc/image/upload/v1674420380/SARA_free-file_2_ivebze.png"
+          content="https://res.cloudinary.com/guttermade-llc/image/upload/v1674429270/SARA_free-file_1_1_zu7ja0.png"
         />
         <meta name="twitter:card" content="summary_large_image"></meta>
       </Head>
