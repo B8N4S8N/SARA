@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import Image from 'next/image';
-import buildspaceLogo from '../assets/buildspace-logo.png';
+import buildspaceLogo from '../assets/Frame 29.png';
 import { useState } from 'react';
 
 const Home = () => {
@@ -84,13 +84,13 @@ const Home = () => {
       </div>
       <div className="badge-container grow">
         <a
-          href="https://buildspace.so/builds/ai-writer"
+          href="http://opensourcerecovery.life"
           target="_blank"
           rel="noreferrer"
         >
           <div className="badge">
             <Image src={buildspaceLogo} alt="buildspace logo" />
-            <p>build with buildspace</p>
+            <p></p>
           </div>
         </a>
       </div>
