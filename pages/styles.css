@@ -239,7 +239,7 @@ textarea {
 .badge-container {
     margin-bottom: 30px;
     display: flex;
-    
+    border-radius: 54.3478% / 238.095%;
     flex: 0 0 auto;
     height: auto;
     left: 20px;
@@ -277,7 +277,7 @@ textarea {
 }
 
 .badge img {
-    
+    overflow: hidden;
     width: 100px;
     height: 30px;
     image-rendering: auto;
@@ -301,8 +301,7 @@ textarea {
     transform: scale(1.1);
     box-shadow: 
     0 0 1em .25em var(--glow-color2),
-    0 0 4em 1em var(--glow-spread-color2),
-    inset 0 0 .75em .25em var(--glow-color2);
+    0 0 4em 1em var(--glow-spread-color2);
 
 }
 
