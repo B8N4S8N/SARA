@@ -1,5 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&display=swap');
 
+* {
+    --glow-color: rgb(217, 176, 255);
+    --glow-spread-color: rgba(191, 123, 255, 0.781);
+    --enhanced-glow-color: rgb(231, 206, 255);
+    --btn-color: rgb(100, 61, 136);
+    --glow-color2: rgb(255, 255, 255);
+    --glow-spread-color2: rgba(25, 0, 255, 0.781);
+    --enhanced-glow-color2: rgb(77, 28, 223);
+    --btn-color2: rgb(100, 61, 136);
+}
+
+
+
+
+
 body {
     margin: 0;
     padding: 0;
@@ -80,15 +95,24 @@ body {
 }
 
 .prompt-box {
-    margin: 33px;
-    border-bottom-width: 1px;
-    border-color: rgba(255, 255, 255, 0.1);
-    border-left-width: 1px;
-    border-right-width: 1px;
-    border-style: solid;
-    border-top-width: 1px;
+    margin-top: 0px;
+    margin-right: 50px;
+    margin-bottom: 10px;
+    margin-left: 50px;
+    border-width: 6.66px;
+    border-color:  rgb(231, 206, 255);
+    
+  
+
+    
+    box-shadow: 
+    0 0 1em .25em var(--glow-color),
+    0 0 4em 1em var(--glow-spread-color2),
+    inset 0 0 .75em .25em var(--glow-color);
     place-content: flex-start;
     align-items: flex-start;
+    text-shadow: 
+    0 0 1em var(--glow-color);
     background-color: rgba(255, 255, 255, 0.05);
     border-radius: 16px;
     display: flex;
@@ -99,10 +123,10 @@ body {
     overflow: hidden;
     padding: 20px;
     position: relative;
-    width: 610px;
+    width: 500px;
     max-width: 1200px;
     will-change: transform;
-    overflow: auto;
+    overflow: visible;
     outline: none;
     resize: none;
     font-size: 16px;
@@ -121,7 +145,7 @@ textarea {
 
 
 .prompt-box:focus {
-    border-color:rgba(255, 255, 255, 0.75)
+    border-color: rgb(255, 255, 255);
 }
 
 
@@ -174,7 +198,10 @@ textarea {
 .generate-button {
     place-content: flex-start;
     align-items: flex-start;
-    background-color: rgb(255, 79, 18);
+    background-color: rgba(77, 28, 223, 0.178);
+    text-shadow: 
+    0 0 .5em var(--glow-color);
+   
     border-radius: 100px;
     display: flex;
     flex: 0 0 auto;
@@ -212,13 +239,15 @@ textarea {
 .badge-container {
     margin-bottom: 30px;
     display: flex;
-    bottom: 20px;
+    
     flex: 0 0 auto;
     height: auto;
     left: 20px;
-    position: static;
+    top: 20px;
+    position: fixed;
     width: auto;
     z-index: 1;
+    overflow:auto;
 }
 
 .badge-container a {
@@ -230,7 +259,7 @@ textarea {
     border-top-width: 1px;
     background-color: rgb(0, 0, 0);
     border-radius: 54.3478% / 238.095%;
-    
+   
     transform: none;
     transform-origin: 50% 50% 0px;
     font-size: 14px;
@@ -248,6 +277,7 @@ textarea {
 }
 
 .badge img {
+    
     width: 100px;
     height: 30px;
     image-rendering: auto;
@@ -269,9 +299,17 @@ textarea {
 
 .grow:hover {
     transform: scale(1.1);
+    box-shadow: 
+    0 0 1em .25em var(--glow-color2),
+    0 0 4em 1em var(--glow-spread-color2),
+    inset 0 0 .75em .25em var(--glow-color2);
+
 }
 
 .output {
+    color: white;
+    text-shadow: 
+    0 0 .5em var(--glow-color);
     place-content: center flex-start;
     align-items: center;
     display: flex;
@@ -316,7 +354,7 @@ textarea {
 .output-content {
     outline: none;
     display: flex;
-    /* max-width: 25%; */
+     max-width: 69%; 
     flex-direction: column;
     justify-content: flex-start;
     flex-shrink: 0;

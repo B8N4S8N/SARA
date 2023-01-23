@@ -40,12 +40,29 @@ const Home = () => {
         <title>Own Your Path w/S.A.R.A.</title>
       </Head>
       <div className="container">
+
+      <div className="badge-container grow">
+        <a
+          href="http://opensourcerecovery.life"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <div className="badge">
+            <Image src={buildspaceLogo} alt="buildspace logo" />
+            <p></p>
+          </div>
+        </a>
+      </div>
+
         <div className="header">
+
+        
+
           <div className="header-title">
           <Image
       
       src={logo}
-      alt="Picture of the author"
+      alt="logo for S.A.R.A."
       width={300}
       height={100}
     />
