@@ -4,6 +4,7 @@ import buildspaceLogo from '../assets/Frame 29.png';
 import { useState } from 'react';
 import logo from '/assets/output2.png';
 
+
 const Home = () => {
   const [userInput, setUserInput] = useState('');
 
