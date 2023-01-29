@@ -1,9 +1,16 @@
 import { Configuration, OpenAIApi } from 'openai';
 import axios from 'axios';
+import { customsearch } from '@googleapis/customsearch';
 
 //require('dotenv').config();
 
-const { CustomSearch } = require('@google-cloud/customsearch');
+//const { customsearch } = require('@googleapis/customsearch');
+
+//const searchClient = new CustomSearch({
+//  apiKey: 'YOUR_CSEARCH_API_KEY',
+//  engineId: 'YOUR_CSEARCH_ENGINE_ID'
+//});
+
 const configuration = new Configuration({
   apiKey: process.env.OPENAI_API_KEY,
 });
@@ -46,7 +53,22 @@ max_tokens: 550,
 
 const basePromptOutput = baseCompletion.data.choices.pop();
 
-res.status(200).json({ output: basePromptOutput });
+const [results] = await searchClient.search(req.body.userInput);
+let searchOutput = '';
+if (results.length > 0) {
+  searchOutput = `I found the following results for "${req.body.userInput}":`;
+  results.forEach(result => {
+    searchOutput += `\n\n- ${result.title}: ${result.link}`;
+  });
+} else {
+  searchOutput = `I'm sorry, I couldn't find any results for "${req.body.userInput}".`;
+}
+
+// Include the search results in the output
+const finalOutput = `${basePromptOutput}\n\n${searchOutput}`;
+
+
+res.status(200).json({ output: finalOutput });
 };
 
 export default generateAction;
