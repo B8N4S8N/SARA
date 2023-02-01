@@ -109,7 +109,7 @@ const Home = () => {
       </div>
       <div className="badge-container grow">
         <a
-          href="http://opensourcerecovery.life"
+          href="https://www.buymeacoffee.com/OSRecovery"
           target="_blank"
           rel="noreferrer"
         >
